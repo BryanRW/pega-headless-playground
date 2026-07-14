@@ -1,0 +1,15 @@
+{
+  "name": "pega-headless-car-sales-lab",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @pega-headless/dx-api-headless-web",
+    "build": "npm run build -w @pega-headless/dx-api-headless-web",
+    "lint": "npm run lint -w @pega-headless/dx-api-headless-web",
+    "preview": "npm run preview -w @pega-headless/dx-api-headless-web"
+  }
+}
