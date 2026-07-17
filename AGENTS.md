@@ -2,8 +2,8 @@
 
 This repository is a single Pega headless car sales lab. It is currently organized for three related tracks:
 
-- `apps/metadata-headless-web`: headless web app driven by Pega metadata.
-- `apps/dx-api-headless-web`: active React/Vite app using DX API style service adapters.
+- `apps/metadata-headless-web`: placeholder for older metadata-rendering experiments.
+- `apps/dx-api-headless-web`: active React/Vite app for the Constellation-backed DX API exploration.
 - `apps/mobile-sdk-instance`: placeholder for SDK-driven mobile app instance experiments.
 
 Shared code should move into `packages/*` only when more than one app needs it:
@@ -19,6 +19,16 @@ Shared code should move into `packages/*` only when more than one app needs it:
 - The implementation is built class by class.
 - Do not assume app files, scripts, databases, skills, deploy config, or automations exist until they are present in the repo.
 - The current working implementation is `apps/dx-api-headless-web`.
+- Target architecture is Pega Constellation. Do not steer new UI work toward Traditional UI, section/harness rendering, or the Traditional React Starter Pack unless the user explicitly changes the architecture.
+- Current API adapters are simplified lab adapters. Treat `/cases`, `/assignments`, and `/data/dashboard` as temporary endpoints until replaced or wrapped by Constellation DX API / React SDK aligned adapters.
+
+## Constellation Direction
+
+- Prefer Constellation DX API and React SDK concepts for future case, assignment, view, action, validation, and refresh work.
+- Keep Pega responsible for case lifecycle, assignment routing, view metadata, validations, and available actions.
+- Keep React responsible for app shell, routing, presentation composition, design polish, and any local-only lab visualizations.
+- Avoid hardcoding case-specific flow logic in React when Constellation metadata or assignment action contracts should drive it.
+- Keep environment values in `apps/dx-api-headless-web/.env` for the active Vite app. Do not commit real `.env` files or secrets.
 
 ## Working Rules
 

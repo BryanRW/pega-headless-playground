@@ -12,8 +12,8 @@ Prefer a script or tool instead of a skill when the work is deterministic and ca
 
 These are candidates, not implemented skills:
 
-- Pega DX API adapter setup: how to connect the active web app to real Pega authentication, cases, assignments, customers, and dashboard endpoints.
-- Pega metadata rendering workflow: how to turn Pega metadata contracts into React-rendered views, fields, actions, and validations.
+- Pega Constellation DX API adapter setup: how to connect the active web app to real Pega authentication, cases, assignments, views, actions, validations, and refresh endpoints.
+- Pega Constellation rendering workflow: how to turn Constellation view metadata into React-rendered layouts, fields, actions, and validation messages.
 - Mobile SDK instance workflow: how to configure and validate SDK-driven mobile app instance experiments.
 - Shared package extraction workflow: how to move repeated app logic into `packages/pega-client`, `packages/pega-types`, `packages/mock-data`, or `packages/ui`.
 
